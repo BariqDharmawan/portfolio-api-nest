@@ -3,6 +3,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
+require('dotenv').config();
+
 @Module({
 	imports: [
 		TypeOrmModule.forRoot({
@@ -11,7 +13,7 @@ import { AppService } from './app.service';
 			port: 3306,
 			username: 'root',
 			password: '',
-			database: 'portfolio-api',
+			database: 'portfolio_api',
 			entities: [],
 			synchronize: true,
 		}),
